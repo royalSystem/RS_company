@@ -9,6 +9,7 @@ const SocialButton: FC<SocialButtonType> = ({ text }) => {
   return (
     <>
       <Button
+        as='button'
         transform='rotate(270deg)'
         fontWeight='medium'
         lineHeight='25.18px'

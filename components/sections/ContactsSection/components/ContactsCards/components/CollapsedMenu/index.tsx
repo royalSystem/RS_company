@@ -1,5 +1,6 @@
 import { Box, Collapse, useDisclosure, Text } from '@chakra-ui/react'
 import { useCallback } from 'react'
+import AddressCard from '../AddressCard'
 import { linksArr } from '../LinksCard'
 
 const CollapsedMenu = () => {
@@ -23,7 +24,7 @@ const CollapsedMenu = () => {
       <Box
         as='button'
         onClick={onToggle}
-        marginTop='100px'
+        marginTop='40px'
       >
         <Text
           _hover={{
@@ -31,13 +32,14 @@ const CollapsedMenu = () => {
           }}
           color='white'
           fontSize='25px'
-          lineHeight='30px'
+          lineHeight='17px'
           fontWeight='700'
         >Quik Links
         </Text>
       </Box>
       <Collapse in={isOpen} animateOpacity>
         <Box
+          as='div'
           height='200px'
           paddingY='20px'
           paddingLeft='20px'
@@ -50,6 +52,12 @@ const CollapsedMenu = () => {
         >{renderLinks()}
         </Box>
       </Collapse>
+      <Box
+        as='div'
+        marginTop='30px'
+      >
+        <AddressCard />
+      </Box>
     </>
   )
 }

@@ -11,6 +11,7 @@ const TeamSection = () => {
       paddingBottom='60px'
     >
       <Flex
+        as='div'
         flexDir='row'
         bgColor='black'
         justifyContent='center'

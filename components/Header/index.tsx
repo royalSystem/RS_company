@@ -1,9 +1,14 @@
+import { FC } from 'react'
 import Navbar from './components/Navbar'
 
-const Header = () => {
+type HeaderProps = {
+  onMenuHandler: () => void
+}
+
+const Header: FC<HeaderProps> = ({ onMenuHandler }) => {
   return (
     <header >
-      <Navbar />
+      <Navbar onOpenDrawer={onMenuHandler} />
     </header>
   )
 }

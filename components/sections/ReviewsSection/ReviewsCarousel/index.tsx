@@ -73,6 +73,7 @@ const ReviewsCarousel = () => {
 
   return (
     <Flex
+      as='div'
       width='100%'
       justifyContent='center'
       alignItems='center'
@@ -80,6 +81,7 @@ const ReviewsCarousel = () => {
      
     >
       <Box
+        as='div'
         maxW='1900px'
         width='100%'
         paddingRight='2px'

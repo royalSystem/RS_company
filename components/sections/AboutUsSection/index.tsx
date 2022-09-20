@@ -15,6 +15,7 @@ const AboutUsSection = () => {
       bgColor='black'
       width='100%'
       paddingLeft='30px'
+      id='aboutUs-section'
     >
       <Flex
         width='100%'

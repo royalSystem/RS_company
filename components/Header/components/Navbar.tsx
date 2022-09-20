@@ -1,21 +1,14 @@
 import { Button, Flex, HStack, Box, useBreakpointValue } from '@chakra-ui/react'
-
-import { useCallback } from 'react'
-import MenuIcon from '../../../icons/MenuIcon'
+import { FC, useCallback } from 'react'
+import { navigation } from '../../../data'
+import BurgerMenu from './BurgerMenu'
 import NavButton from './NavButton'
 
-const navigation = [
-  { id: '0', label: 'Home' },
-  { id: '1', label: 'About as' },
-  { id: '2', label: 'Services' },
-  { id: '3', label: 'Project' },
-  { id: '4', label: 'Blogs' },
-  { id: '5', label: 'Pages' },
-  { id: '6', label: 'Contact Us' },
+type NavbarProps = {
+  onOpenDrawer:() => void
+}
 
-]
-
-const Navbar = () => {
+const Navbar: FC<NavbarProps> = ({ onOpenDrawer }) => {
   const renderNavButtons = useCallback(() => {
     return navigation.map((item) => {
       return (
@@ -23,7 +16,7 @@ const Navbar = () => {
           as='li'
           key={item.id}
         >
-          <NavButton text={item.label}/>
+          <NavButton text={item.label} href={item.href}/>
         </Box>
       )
     })
@@ -39,15 +32,14 @@ const Navbar = () => {
         {renderNavButtons()}
       </HStack>
       <Button
+        as='button'
         textColor='generalGray'
         bgColor='black'
         _hover={{ backgroundColor: 'midleGray' }}
         _active={{ backgroundColor: 'lightGray' }}
         width='170px'
         minWidth='130px'
-        textStyle={{
-          fontWeight: 'semiBold',
-        }}
+        fontWeight='700'
       >Get A Quote
       </Button>
     </>
@@ -56,29 +48,9 @@ const Navbar = () => {
   const navElements = useBreakpointValue({
     base: navbarButtons,
     xl: navbarButtons,
-    lg: (
-      <Box
-        marginLeft='auto'
-      >
-        <MenuIcon />
-      </Box>
-    ),
-    md: (
-      <Box
-        marginLeft='auto'
-      >
-        <MenuIcon />
-      </Box>
-    ),
-    sm:
-    (
-      <Box
-        as='button'
-        marginLeft='auto'
-      >
-        <MenuIcon />
-      </Box>
-    ),
+    lg: <BurgerMenu onPress={onOpenDrawer} />,
+    md: <BurgerMenu onPress={onOpenDrawer}/>,
+    sm: <BurgerMenu onPress={onOpenDrawer}/>,
 
   })
 
@@ -91,10 +63,10 @@ const Navbar = () => {
       width='100%'
       justifyContent='space-between'
       alignItems='center'
-      paddingTop='40px'
+      paddingTop={{ base: '40px ', xl: '40px', lg: '20px', md: '20px', sm: '20px' }}
       paddingBottom='20px'
-      paddingX='100px'
-      backgroundColor='rgba(25, 26, 28, 0.6)'
+      paddingX={{ base: '100px ', xl: '100px', lg: '40px', md: '40px', sm: '40px' }}
+      backgroundColor='navBarColor'
     >
       {navElements}
     </Flex>

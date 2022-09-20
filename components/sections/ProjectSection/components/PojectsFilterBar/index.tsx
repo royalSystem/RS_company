@@ -1,14 +1,7 @@
 import { Button, HStack, Box } from '@chakra-ui/react'
 import { FC, useCallback } from 'react'
+import { filteButtonsArr } from '../../../../../data'
 import FilterActiveButton from './components/FilterActiveButton'
-
-const filteButtonsArr = [
-  { id: '1', type: 'all', text: 'All' },
-  { id: '2', type: 'ui', text: 'UI/UX' },
-  { id: '3', type: 'web desig', text: 'Web Design' },
-  { id: '4', type: 'developing', text: 'Developing' },
-  { id: '5', type: 'graphic design', text: 'Graphic Design' },
-]
 
 type ProjectsFilterBarProps = {
   filter: string
@@ -27,9 +20,11 @@ const ProjectsFilterBar: FC<ProjectsFilterBarProps> = ({ filter, onFilterClick }
       )
         : (
           <Box
+            as='div'
             paddingTop='10px'
           >
             <Button
+              as='button'
               key={item.id}
               backgroundColor='secondaryBlack'
               _hover={{ backgroundColor: 'midleGray' }}
@@ -46,6 +41,7 @@ const ProjectsFilterBar: FC<ProjectsFilterBarProps> = ({ filter, onFilterClick }
 
   return (
     <HStack
+      as='div'
       spacing='25px'
       marginTop='60px'
       flexWrap='wrap'

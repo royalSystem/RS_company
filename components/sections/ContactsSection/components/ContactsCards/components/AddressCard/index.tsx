@@ -1,14 +1,10 @@
 import { Flex, Box, Text } from '@chakra-ui/react'
 import { useCallback } from 'react'
+import { contactsArr } from '../../../../../../../data'
 import LocationIcon from '../../../../../../../icons/footerIcons/LocationIcon'
 import MailIcon from '../../../../../../../icons/footerIcons/MailIcon'
 import PhoneIcon from '../../../../../../../icons/footerIcons/PhnoneIcon'
 
-const contactsArr = [
-  { id: '1', type: 'number', value1: '+880 176 1111 45', value2: '+880 176 1111 45s' },
-  { id: '2', type: 'mail', value1: 'info@example.com', value2: 'info@support.com' },
-  { id: '3', type: 'address', value1: 'info@example.com', value2: 'info@support.com' },
-]
 const AddressCard = () => {
   const returnIcon = (type:string) => {
     switch (type) {
@@ -22,12 +18,12 @@ const AddressCard = () => {
   }
 
   const renderCards = useCallback(() => {
-    return contactsArr.map((item, index) => {
+    return contactsArr.map((item) => {
       return (
         <Flex
           key={item.id}
           alignItems='center'
-          marginTop={index === Number(item.id) ? '34px' : '40px'}
+          marginTop={{ base: '40px ', xl: '40px', lg: '20px', md: '20px', sm: '20px' }}
         >
           {returnIcon(item.type)}
           <Flex

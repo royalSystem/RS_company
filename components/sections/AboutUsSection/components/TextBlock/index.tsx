@@ -48,7 +48,7 @@ const TextBlock = () => {
       </Text>
       <Box
         marginTop='50px'
-        paddingLeft='20px'
+        justifyContent='center'
       >
         <CompanyCard />
       </Box>

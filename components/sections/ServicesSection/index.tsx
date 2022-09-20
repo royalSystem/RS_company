@@ -10,6 +10,7 @@ const ServicesSection = () => {
       flexDirection='column'
       alignItems='center'
       justifyContent='center'
+      id='services-section'
     >
       <Flex
         as='div'

@@ -11,6 +11,7 @@ const MediaBlock = () => {
 
   return (
     <Box
+      as='div'
       maxW='600px'
       width='100%'
       paddingTop={isLastBPoint ? '0px ' : '40px'}

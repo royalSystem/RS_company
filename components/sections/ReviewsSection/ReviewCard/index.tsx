@@ -27,6 +27,7 @@ const ReviewCard: FC<ReviewCardProps> = ({ raiting, name, profession }) => {
 
   return (
     <VStack
+      as='div'
       maxWidth={{ base: '571px ', xl: '571px', lg: '500px', md: '400px', sm: '400px' }}
       width='100%'
       bgColor='#0D0D0F'
@@ -37,13 +38,17 @@ const ReviewCard: FC<ReviewCardProps> = ({ raiting, name, profession }) => {
       paddingBottom='20px'
     >
       <Flex
+        as='div'
         flexDirection={isLastBPoint ? 'column' : 'row'}
         width='100%'
         marginTop={{ base: '45px ', xl: '45px', md: '20px', sm: '20px' }}
         justifyContent='space-between'
       >
-        <Box>
+        <Box
+          as='div'
+        >
           <Text
+            as='p'
             fontSize={{ base: '25px ', xl: '25px', md: '20px', sm: '17px' }}
             fontWeight='600'
             lineHeight='30px'
@@ -51,6 +56,7 @@ const ReviewCard: FC<ReviewCardProps> = ({ raiting, name, profession }) => {
           >{name}
           </Text>
           <Text
+            as='p'
             fontSize={{ base: '17px ', xl: '17px', md: '16px', sm: '14px' }}
             fontWeight='400'
             lineHeight='30px'
@@ -59,11 +65,14 @@ const ReviewCard: FC<ReviewCardProps> = ({ raiting, name, profession }) => {
           >{profession}
           </Text>
         </Box>
-        <HStack >
+        <HStack
+          as='div'
+        >
           {renderStars()}
         </HStack>
       </Flex>
       <Text
+        as='p'
         fontSize={{ base: '15px ', xl: '15px', md: '15px', sm: '12px' }}
         fontWeight='300'
         lineHeight={{ base: '30px ', xl: '30px', md: '25px', sm: '17px' }}
@@ -75,11 +84,13 @@ const ReviewCard: FC<ReviewCardProps> = ({ raiting, name, profession }) => {
         Donec lacinia placerat felis non aliquam.
       </Text>
       <HStack
+        as='div'
         paddingTop={{ base: '40px ', xl: '40px', md: '40px', sm: '20px' }}
         width='100%'
         justifyContent='space-between'
       >
         <Box
+          as='div'
           bgColor='lightGray'
           borderRadius='50%'
           width='90px'
@@ -87,6 +98,7 @@ const ReviewCard: FC<ReviewCardProps> = ({ raiting, name, profession }) => {
         />
         {isLastBPoint ? (
           <HStack
+            as='div'
             paddingRight='27px'
           >
             <VectorIcon />

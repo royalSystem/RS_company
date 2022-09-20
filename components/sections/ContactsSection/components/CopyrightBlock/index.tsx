@@ -9,16 +9,18 @@ const CopyrightBlock = () => {
   
   return (
     <Flex
+      as='div'
       maxWidth='1170px'
       width='100%'
       borderTopWidth='1px'
-      borderColor='#232323'
+      borderColor='maxGray'
       marginTop='100px'
       justifyContent='space-between'
       paddingTop='33px'
       flexDirection={!isLastBPoint ? 'column' : 'row'}
     >
       <Text
+        as='p'
         fontSize='14px'
         fontWeight='700'
         lineHeight='22.04px'
@@ -26,10 +28,11 @@ const CopyrightBlock = () => {
       >Copyright 2022 Royal Soft Company | Design By Royal Soft Company
       </Text>
       <Text
+        as='p'
         fontSize='14px'
         fontWeight='500'
         lineHeight='22.04px'
-        color='#FFFFFF'
+        color='white'
       >Privacy Policy  |  Terms of Use
       </Text>
       

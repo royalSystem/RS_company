@@ -22,7 +22,7 @@ const SocialsCard = () => {
         lineHeight='30px'
         color='generalGray'
         maxWidth='270px'
-        marginTop='45px'
+        marginTop={{ base: '45px ', xl: '45px', lg: '20px', md: '20px', sm: '20px' }}
       >Integer purus odio, placerat nec ande
         rhoncus in, ullamcorper nec dolor. on
         aptent taciti sociosqu.

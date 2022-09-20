@@ -3,6 +3,7 @@ import { Box } from '@chakra-ui/react'
 const ImageContainer = () => {
   return (
     <Box
+      as='div'
       position='relative'
       zIndex='1'
       backgroundColor='lightGray'

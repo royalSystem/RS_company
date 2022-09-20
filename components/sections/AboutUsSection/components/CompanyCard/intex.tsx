@@ -4,7 +4,6 @@ const CompanyCard = () => {
   return (
     <Flex
       width='98%'
-      height='98%'
       borderRadius='10px'
       backgroundImage='linear-gradient(150deg, #75DAB4, black , black, #75DAB4  )'
       justifyContent='center'
@@ -13,9 +12,8 @@ const CompanyCard = () => {
       padding='1px'
     >
       <Box
-        backgroundColor='nightBlue'
+        backgroundColor='#0D0D0F'
         width='100%'
-        height='100%'
         borderRadius='10px'
         paddingX='50px'
         paddingTop='20px'

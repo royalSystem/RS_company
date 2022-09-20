@@ -28,11 +28,14 @@ const colors = {
   greenLink: '#75DAB4',
   generalGray: '#E4E4E4',
   brightGrey: '#5F6062',
+  maxGray: '#232323',
   nightBlue: '#0D0D0F',
+  darkBlue: '#191A1C',
   midleGray: '#969595',
   lightGray: '#C4C4C4',
   lightYellow: '#FFC107',
   hightYellow: '#fff9e6',
+  navBarColor: 'rgba(25, 26, 28, 0.6)',
 }
 
 const overrides = {

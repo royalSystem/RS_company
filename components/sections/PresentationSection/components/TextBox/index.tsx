@@ -10,6 +10,7 @@ const TextBox = () => {
   const renderButtons = useCallback(() => {
     return textButtonsArr.map((item) =>
       <Button
+        as='button'
         key={item.id}
         height='52px'
         backgroundColor='black'
@@ -22,8 +23,8 @@ const TextBox = () => {
         <Text
           paddingX={{ base: '45px ', xl: '45px', md: '35px', sm: '25px' }}
           fontWeight='700'
-          textColor='#E4E4E4'
-          lineHeight='27.76'
+          textColor='generalGray'
+          lineHeight='27.76px'
         >{item.label}
         </Text>
       </Button>)
@@ -31,6 +32,7 @@ const TextBox = () => {
 
   return (
     <Box
+      as='div'
       paddingRight={{ base: '30px ', xl: '30px', md: '30px', sm: '5px' }}
       paddingTop={{ base: '200px ', xl: '30px', md: '30px', sm: '0px' }}
       paddingBottom={{ base: '0px ', xl: '0px', md: '0x', sm: '20px' }}
@@ -40,6 +42,7 @@ const TextBox = () => {
     >
       <Box maxWidth='570px'>
         <Text
+          as='h1'
           fontWeight='bold'
           lineHeight='90px'
           textColor='generalGray'
@@ -54,6 +57,7 @@ const TextBox = () => {
         >Company
         </Text>
         <Text
+          as='p'
           noOfLines={[7]}
           fontWeight='normal'
           lineHeight='35px'

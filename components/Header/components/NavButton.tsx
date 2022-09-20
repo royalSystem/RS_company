@@ -1,13 +1,16 @@
-import { Button } from '@chakra-ui/react'
+import { Link } from '@chakra-ui/react'
 import { FC } from 'react'
 
 type NavButtonType = {
   text: string
+  href: string
 }
 
-const NavButton: FC<NavButtonType> = ({ text }) => {
+const NavButton: FC<NavButtonType> = ({ text, href }) => {
   return (
-    <Button
+    <Link
+      as='a'
+      href={href}
       fontWeight='medium'
       lineHeight='23.61px'
       fontSize='15px'
@@ -17,7 +20,7 @@ const NavButton: FC<NavButtonType> = ({ text }) => {
       _active={{ backgroundColor: 'lightGray' }}
     >
       {text}
-    </Button>
+    </Link>
   )
 }
 

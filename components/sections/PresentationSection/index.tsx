@@ -17,6 +17,7 @@ const PresentationSection = () => {
       flexDir='row'
       justifyContent='flex-end'
       width='100%'
+      id='presentation-section'
     >
       <Box
         marginTop={{ base: '400px ', xl: '290px', md: '290px', sm: '200px' }}

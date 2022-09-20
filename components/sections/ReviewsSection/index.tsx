@@ -10,6 +10,7 @@ const ReviewsSection = () => {
       justifyContent='center'
     >
       <Flex
+        as='div'
         marginTop='48px'
         flexDirection='column'
         alignItems='center'

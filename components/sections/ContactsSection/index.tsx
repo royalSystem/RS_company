@@ -17,11 +17,12 @@ const ContactsSection = () => {
       bgColor='secondaryBlack'
       justifyContent='center'
       paddingX='40px'
+      id='contactUs-section'
     >
       <Flex
+        as='div'
         maxWidth='1170px'
         width='100%'
-        as='footer'
         alignItems='center'
         flexDir='column'
         paddingBottom='31px'
@@ -29,6 +30,7 @@ const ContactsSection = () => {
         {!breakLgPoint
           ? (
             <Box
+              as='div'
               justifySelf='flex-start'
               alignSelf='flex-start'
             >

@@ -19,6 +19,7 @@ const ProjectsList: FC<ProjectsListProps> = ({ projects }) => {
     return projects.map((item) => {
       return (
         <Box
+          as='div'
           key={item.id}
           paddingX='20px'
         >
@@ -41,7 +42,7 @@ const ProjectsList: FC<ProjectsListProps> = ({ projects }) => {
     >
       <Box
         as='div'
-        marginTop='40px'
+        marginTop='50px'
         width='100%'
         maxWidth='1500px'
         marginX='auto'

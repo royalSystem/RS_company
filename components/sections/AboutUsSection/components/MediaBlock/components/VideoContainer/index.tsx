@@ -15,6 +15,7 @@ const VideoContainer = () => {
       zIndex='2'
     >
       <AspectRatio
+        as='div'
         maxW='200px'
         width='100%'
         ratio={1 / 1.51}

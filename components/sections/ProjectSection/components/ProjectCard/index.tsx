@@ -17,6 +17,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ details, label, category }) => {
       as='div'
     >
       <Box
+        as='div'
         position='relative'
         zIndex='1'
         backgroundColor='lightGray'
@@ -25,6 +26,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ details, label, category }) => {
         borderRadius='10px'
       />
       <Flex
+        as='div'
         position='relative'
         zIndex='2'
         backgroundColor='cardBlack'
@@ -39,6 +41,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ details, label, category }) => {
         left='25px'
       >
         <Text
+          as='p'
           fontSize='15px'
           fontWeight='500'
           color='generalGray'
@@ -46,6 +49,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ details, label, category }) => {
           {category}
         </Text>
         <Text
+          as='p'
           fontSize='22px'
           fontWeight='600'
           color='generalGray'

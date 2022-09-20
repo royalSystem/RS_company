@@ -10,24 +10,23 @@ const ContactsCard = () => {
       lg: true,
     },
   )
-  const breakMdPoint = useBreakpointValue(
-    {
-      md: true,
-    },
-  )
-
+  
   return (
     <Flex
-      marginTop='100px'
+      as='div'
+      marginTop={{ base: '100px ', xl: '100px', lg: '40px', md: '40px', sm: '40px' }}
       justifyContent='space-between'
       maxWidth='1170px'
       width='100%'
     >
       <SocialsCard />
-      {breakLgPoint ? <OurServicesCard /> : null}
-      {breakMdPoint ? <LinksCard /> : null}
-      {breakLgPoint ? <AddressCard /> : null}
-     
+      {breakLgPoint ? (
+        <>
+          <OurServicesCard />
+          <LinksCard />
+          <AddressCard />
+        </>
+      ) : null}
     </Flex>
   )
 }
